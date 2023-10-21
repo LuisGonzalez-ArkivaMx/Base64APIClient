@@ -1,0 +1,380 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5": {
+      "Interop.MFilesAPI/21.11.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Interop.MFilesAPI.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Interop.MFilesAPI.dll": {}
+        }
+      },
+      "MFiles.Crypto/21.11.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/MFiles.Crypto.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MFiles.Crypto.dll": {}
+        }
+      },
+      "MFiles.VAF/2.3.623.9": {
+        "type": "package",
+        "dependencies": {
+          "Interop.MFilesAPI": "[21.11.3]",
+          "MFiles.Crypto": "[21.11.3]",
+          "MFiles.VAF.Configuration": "[21.11.3]",
+          "Newtonsoft.Json": "[10.0.3]"
+        },
+        "compile": {
+          "lib/net45/MFiles.VAF.dll": {},
+          "lib/net45/MFiles.VAF.resources.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MFiles.VAF.dll": {},
+          "lib/net45/MFiles.VAF.resources.dll": {}
+        }
+      },
+      "MFiles.VAF.Configuration/21.11.3": {
+        "type": "package",
+        "dependencies": {
+          "Interop.MFilesAPI": "21.11.3",
+          "MFiles.Crypto": "21.11.3"
+        },
+        "compile": {
+          "lib/net45/MFiles.VAF.Configuration.Interfaces.dll": {},
+          "lib/net45/MFiles.VAF.Configuration.dll": {},
+          "lib/net45/MFiles.VAF.Configuration.resources.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MFiles.VAF.Configuration.Interfaces.dll": {},
+          "lib/net45/MFiles.VAF.Configuration.dll": {},
+          "lib/net45/MFiles.VAF.Configuration.resources.dll": {}
+        }
+      },
+      "MFiles.VAF.Extensions/22.9.41": {
+        "type": "package",
+        "dependencies": {
+          "MFiles.VAF": "2.3.623.9",
+          "MFiles.VaultApplications.Logging": "22.5.136",
+          "MFilesAPI.Extensions": "1.0.6"
+        },
+        "compile": {
+          "lib/net45/MFiles.VAF.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MFiles.VAF.Extensions.dll": {}
+        },
+        "resource": {
+          "lib/net45/fi/MFiles.VAF.Extensions.resources.dll": {
+            "locale": "fi"
+          },
+          "lib/net45/fr/MFiles.VAF.Extensions.resources.dll": {
+            "locale": "fr"
+          }
+        }
+      },
+      "MFiles.VaultApplications.Logging/22.5.136": {
+        "type": "package",
+        "dependencies": {
+          "Interop.MFilesAPI": "[21.11.3]",
+          "MFiles.VAF.Configuration": "[21.11.3]",
+          "NLog": "[4.7.13]"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Core",
+          "System.Data",
+          "System.Data.DataSetExtensions",
+          "System.Net.Http",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net45/MFiles.VaultApplications.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MFiles.VaultApplications.Logging.dll": {}
+        }
+      },
+      "MFilesAPI.Extensions/1.0.6": {
+        "type": "package",
+        "dependencies": {
+          "Interop.MFilesAPI": "21.11.3"
+        },
+        "compile": {
+          "lib/net45/MFilesAPI.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MFilesAPI.Extensions.dll": {}
+        }
+      },
+      "Newtonsoft.Json/10.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NLog/4.7.13": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Configuration",
+          "System.Core",
+          "System.Data",
+          "System.IO.Compression",
+          "System.Runtime.Serialization",
+          "System.ServiceModel",
+          "System.Transactions",
+          "System.Xml"
+        ],
+        "compile": {
+          "lib/net45/NLog.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NLog.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Interop.MFilesAPI/21.11.3": {
+      "sha512": "QQ6RjKW7AbvQ9pRgzmLOUlEpnL/Y08E56wj307JXEH24L32KUK7knMwhOUv3LBl0+eMc3HV37pRCAk8bbMZfwg==",
+      "type": "package",
+      "path": "interop.mfilesapi/21.11.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "interop.mfilesapi.21.11.3.nupkg.sha512",
+        "interop.mfilesapi.nuspec",
+        "lib/net45/Interop.MFilesAPI.dll"
+      ]
+    },
+    "MFiles.Crypto/21.11.3": {
+      "sha512": "JNDN9VyFKDxlvr+15jorbf8brXoYxMK/Hm6Acm06Knpm0twynOzYXp3NQGK3i/yRwux2uwZbQJKGh45w1otQLA==",
+      "type": "package",
+      "path": "mfiles.crypto/21.11.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/MFiles.Crypto.dll",
+        "mfiles.crypto.21.11.3.nupkg.sha512",
+        "mfiles.crypto.nuspec"
+      ]
+    },
+    "MFiles.VAF/2.3.623.9": {
+      "sha512": "4BirRYCOVmSn/83wYrxe3NMHC4pd2rENrrVkSF01BhN1Bk0Y98KrTKlFL0sKXVYl+4X58TBk3h1h481kNXyBaA==",
+      "type": "package",
+      "path": "mfiles.vaf/2.3.623.9",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/MFiles.VAF.dll",
+        "lib/net45/MFiles.VAF.pdb",
+        "lib/net45/MFiles.VAF.resources.dll",
+        "lib/net45/MFiles.VAF.xml",
+        "mfiles.vaf.2.3.623.9.nupkg.sha512",
+        "mfiles.vaf.nuspec",
+        "tools/init.ps1"
+      ]
+    },
+    "MFiles.VAF.Configuration/21.11.3": {
+      "sha512": "uBNLllckMzxpkiipDdqhOrz4CH7QvxXcmtxKT9h/qW4g1vEyUR5pBJFoxMfw+e6Hqmis8Mc02JeB0Nn4nd1dSw==",
+      "type": "package",
+      "path": "mfiles.vaf.configuration/21.11.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/MFiles.VAF.Configuration.Interfaces.dll",
+        "lib/net45/MFiles.VAF.Configuration.Interfaces.xml",
+        "lib/net45/MFiles.VAF.Configuration.dll",
+        "lib/net45/MFiles.VAF.Configuration.resources.dll",
+        "lib/net45/MFiles.VAF.Configuration.xml",
+        "mfiles.vaf.configuration.21.11.3.nupkg.sha512",
+        "mfiles.vaf.configuration.nuspec"
+      ]
+    },
+    "MFiles.VAF.Extensions/22.9.41": {
+      "sha512": "UsoHoH5w34MsWk8DLZ0gQYPZ8ICwYpTj7y4XPqJDKAe0CKoxCEX/N7K9prZWJOaf0PQLnAN7I8FVTb5nCKmKtQ==",
+      "type": "package",
+      "path": "mfiles.vaf.extensions/22.9.41",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/MFiles.VAF.Extensions.dll",
+        "lib/net45/fi/MFiles.VAF.Extensions.resources.dll",
+        "lib/net45/fr/MFiles.VAF.Extensions.resources.dll",
+        "logo.png",
+        "mfiles.vaf.extensions.22.9.41.nupkg.sha512",
+        "mfiles.vaf.extensions.nuspec",
+        "nuget-readme.md"
+      ]
+    },
+    "MFiles.VaultApplications.Logging/22.5.136": {
+      "sha512": "BKsDn5drwd7aTOXQZDsnvI/xh60WOyGcDRJ8k3kMavqZyU8svAdJkRZ6+TpJCEvOVZIuMHuBqMzcu2NipWuFow==",
+      "type": "package",
+      "path": "mfiles.vaultapplications.logging/22.5.136",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/MFiles.VaultApplications.Logging.dll",
+        "logo.png",
+        "mfiles.vaultapplications.logging.22.5.136.nupkg.sha512",
+        "mfiles.vaultapplications.logging.nuspec"
+      ]
+    },
+    "MFilesAPI.Extensions/1.0.6": {
+      "sha512": "lvZlpLZX/VqjOmbdD417I+usAbotj4cE74fz7iFWPv2SVe5wc1/YwWUtm/vWlnyB7B78I2d+T13Y3aQ3mO2cZA==",
+      "type": "package",
+      "path": "mfilesapi.extensions/1.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/MFilesAPI.Extensions.dll",
+        "lib/netstandard2.0/MFilesAPI.Extensions.dll",
+        "logo.png",
+        "mfilesapi.extensions.1.0.6.nupkg.sha512",
+        "mfilesapi.extensions.nuspec"
+      ]
+    },
+    "Newtonsoft.Json/10.0.3": {
+      "sha512": "hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
+      "type": "package",
+      "path": "newtonsoft.json/10.0.3",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.10.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "tools/install.ps1"
+      ]
+    },
+    "NLog/4.7.13": {
+      "sha512": "AvoGpCuq36B+0wY313XA6gC+YeMvk24rqF8P+HS9fInBGOjCzPjpXp2ln9ATZjPOJtXgHfc8zNmTjyswFGLxvg==",
+      "type": "package",
+      "path": "nlog/4.7.13",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/monoandroid44/NLog.dll",
+        "lib/monoandroid44/NLog.xml",
+        "lib/net35/NLog.dll",
+        "lib/net35/NLog.xml",
+        "lib/net40-client/NLog.dll",
+        "lib/net40-client/NLog.xml",
+        "lib/net45/NLog.dll",
+        "lib/net45/NLog.xml",
+        "lib/netstandard1.3/NLog.dll",
+        "lib/netstandard1.3/NLog.xml",
+        "lib/netstandard1.5/NLog.dll",
+        "lib/netstandard1.5/NLog.xml",
+        "lib/netstandard2.0/NLog.dll",
+        "lib/netstandard2.0/NLog.xml",
+        "lib/sl4/NLog.dll",
+        "lib/sl4/NLog.xml",
+        "lib/sl5/NLog.dll",
+        "lib/sl5/NLog.xml",
+        "lib/wp8/NLog.dll",
+        "lib/wp8/NLog.xml",
+        "lib/xamarinios10/NLog.dll",
+        "lib/xamarinios10/NLog.xml",
+        "nlog.4.7.13.nupkg.sha512",
+        "nlog.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.5": [
+      "MFiles.VAF >= 2.3.623.9",
+      "MFiles.VAF.Extensions >= 22.9.41",
+      "Newtonsoft.Json >= 10.0.3"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\hzapatam\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\hzapatam\\source\\repos\\Base64ApiClient\\Base64ApiClient.csproj",
+      "projectName": "Base64ApiClient",
+      "projectPath": "C:\\Users\\hzapatam\\source\\repos\\Base64ApiClient\\Base64ApiClient.csproj",
+      "packagesPath": "C:\\Users\\hzapatam\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\hzapatam\\source\\repos\\Base64ApiClient\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\hzapatam\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net45"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net45": {
+          "targetAlias": "net45",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net45": {
+        "targetAlias": "net45",
+        "dependencies": {
+          "MFiles.VAF": {
+            "target": "Package",
+            "version": "[2.3.623.9, )"
+          },
+          "MFiles.VAF.Extensions": {
+            "target": "Package",
+            "version": "[22.9.41, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[10.0.3, )"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
