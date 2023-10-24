@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Base64ApiClient
+namespace Base64ApiClient.config
 {
     [DataContract]
     [JsonConfEditor()]

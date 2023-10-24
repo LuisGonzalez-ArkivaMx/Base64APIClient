@@ -1,7 +1,7 @@
+using Base64ApiClient.config;
 using MFiles.VAF.Configuration;
 using MFiles.VAF.Configuration.JsonAdaptor;
 using MFiles.VAF.Extensions;
-using MFiles.VAF.Extensions.ScheduledExecution;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -35,5 +35,14 @@ namespace Base64ApiClient
             Interval = new TimeSpan(0, 1, 0),
             RunOnVaultStartup = false
         };
+
+        [DataMember(Order = 4)]
+        [JsonConfEditor(Label = "Condiciones de busqueda")]
+        public SearchConditionsJA SearchConditionsDocuments;
+
+        [DataMember(Order = 5)]
+        [JsonConfEditor(Label = "Modelos")]
+        public List<MappingModel> MappingModel { get; set; } = new List<MappingModel>();
     }
+
 }
