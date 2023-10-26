@@ -29,7 +29,6 @@ namespace Base64ApiClient
         [TaskProcessor(QueueId, SearchDocumentsTaskType)]
         public void SearchDocuments(ITaskProcessingJob<TaskDirective> job)
         {
-
             job.Commit((transactionalVault) =>
             {
 
@@ -40,7 +39,6 @@ namespace Base64ApiClient
 
         private void GetDocumentsToExtractData()
         {
-
             PropertyValue propertyValue = new PropertyValue();
             PropertyValues propertyValues = new PropertyValues();
             PropertyDef propertyDef;
@@ -73,6 +71,7 @@ namespace Base64ApiClient
 
                 foreach(DownloadFile document in downloadFiles)
                 {
+                    Logger.Info("ID documento: " + objVerEx.ID);
                     Logger.Info("Archivo: " + document.Name + "." + document.Extension);
                     Logger.Info("Archivo descargado: " + document.DownloadFilePath);
                     this.PermanentVault.ObjectFileOperations.DownloadFile(document.FileID, document.Version, document.DownloadFilePath);
@@ -80,7 +79,7 @@ namespace Base64ApiClient
                     document.calculateBase64();
 
                     DocumentToScanRequest documentToScan = new DocumentToScanRequest();
-                    documentToScan.originalFileName = document.Name + document.Extension;
+                    documentToScan.originalFileName = "(" + objVerEx.ID + "): " + document.Name + document.Extension;
                     documentToScan.document = document.Base64Content;
 
                     var client = new Base64Client(Configuration);
