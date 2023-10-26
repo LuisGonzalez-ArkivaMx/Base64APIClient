@@ -28,20 +28,18 @@ namespace Base64ApiClient
         public ServiceEnvironment Production { get; set; }
 
         [DataMember(Order = 20)]
-        [RecurringOperationConfiguration(VaultApplication.QueueId, VaultApplication.SearchDocumentsTaskType)]
-        [JsonConfEditor(Label = "Intervalo de actualización(min)")]
-        public TimeSpanEx Interval { get; set; } = new TimeSpanEx()
-        {
-            Interval = new TimeSpan(0, 1, 0),
-            RunOnVaultStartup = false
-        };
+        [RecurringOperationConfiguration(VaultApplication.QueueId, VaultApplication.SearchDocumentsTaskType, Label = "Programación de tiempo",
+            DefaultValue = "Cada 20 minutos")]
+        public Frequency Frequency { get; set; } = TimeSpan.FromMinutes(20);
 
         [DataMember(Order = 4)]
         [JsonConfEditor(Label = "Condiciones de busqueda")]
         public SearchConditionsJA SearchConditionsDocuments;
-
         [DataMember(Order = 5)]
-        [JsonConfEditor(Label = "Modelos")]
+        [JsonConfEditor(Label = "Documento sin Clasificar")]
+        public UnclassifiedModel UnclassifiedModel { get; set; }
+        [DataMember(Order = 5)]
+        [JsonConfEditor(Label = "Modelos", ChildName ="Modelo")]
         public List<MappingModel> MappingModel { get; set; } = new List<MappingModel>();
     }
 

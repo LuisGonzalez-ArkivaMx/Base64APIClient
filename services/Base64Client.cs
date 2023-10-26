@@ -3,8 +3,6 @@ using Base64ApiClient.util;
 using MFiles.VaultApplications.Logging;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +27,7 @@ namespace Base64ApiClient.services
             this.configuration = configuration;
             if (configuration.UseSandbbox)
             {
+                Logger.Info("Ambiente Sanbox");
                 this.SERVER = "https://base64.ai";
                 this.USERNAME = this.configuration.Sandbox.Username;
                 this.API_KEY = this.configuration.Sandbox.ApiKey;
@@ -45,6 +44,7 @@ namespace Base64ApiClient.services
             }
             else
             {
+                this.Logger?.Info("Ambiente Productivo");
                 this.SERVER = "https://base64.ai";
                 this.USERNAME = this.configuration.Production.Username;
                 this.API_KEY = this.configuration.Production.ApiKey;
@@ -96,18 +96,19 @@ namespace Base64ApiClient.services
                         string content = await response.Content.ReadAsStringAsync();
                         result.response = JsonUtils.DeserializeJsonArray(content);
 
-                        Logger.Debug("[ RESPONSE ]: " + content);
+                        this.Logger?.Info("[ RESPONSE ]: " + content);
                     }
                     else
                     {
-                        var respuestaContenido = await response.Content.ReadAsStringAsync();
-                        Logger.Error("La solicitud marco error. Respuesta: " + respuestaContenido);
+                        var content = await response.Content.ReadAsStringAsync();
+                        this.Logger?.Debug("[ RESPONSE ]: " + content);
+                        this.Logger?.Error("La solicitud marco error. Respuesta: " + content);
                     }
                 }
             }
             catch(Exception e)
             {
-                Logger.Error(e.Message);
+                this.Logger?.Error(e.Message);
             }
 
             return result;

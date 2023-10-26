@@ -4,9 +4,9 @@
 			xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 			xsi:noNamespaceSchemaLocation="http://www.m-files.com/schemas/appdef-server-v3.xsd">
   <guid>d4cddaa7-ae99-42fb-9848-9fed7290ff52</guid>
-  <name>Base64ApiClient</name>
-  <description></description>
-  <publisher></publisher>
+  <name>M-Files for Base64.ai</name>
+  <description>La aplicación integra M-Files con el servicio de Base64.ai para la extracción de datos de documentos</description>
+  <publisher>Arkiva</publisher>
   <version>0.1</version>
   <copyright></copyright>
   <required-mfiles-version>20.5.0.0</required-mfiles-version>

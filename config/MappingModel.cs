@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 namespace Base64ApiClient.config
 {
     [DataContract]
+    [JsonConfEditor(NameMember = "ModelName")]
     public class MappingModel
     {
         [DataMember]
@@ -23,12 +24,21 @@ namespace Base64ApiClient.config
         [JsonConfEditor(Label = "Class")]
         public MFIdentifier Type { get; set; }
         [DataMember]
-        [JsonConfEditor(Label = "Mapeos")]
+        [MFValueListItem(ValueList = "MF.OT.DocumentType")]
+        [JsonConfEditor(Label = "Document Type Value")]
+        public MFIdentifier DocumentTypeValue { get; set; }
+        [DataMember]
+        [MFPropertyDef]
+        [JsonConfEditor(Label = "Property Document Type")]
+        public MFIdentifier PropertyDocumentType { get; set; }
+        [DataMember]
+        [JsonConfEditor(Label = "Mapeos", ChildName ="Mapeo")]
         public List<MappingProperty> Mappings { get; set; } = new List<MappingProperty>();
         
     }
 
     [DataContract]
+    [JsonConfEditor(NameMember = "FieldName")]
     public class MappingProperty
     {
         [DataMember]
@@ -36,7 +46,7 @@ namespace Base64ApiClient.config
         public string FieldName { get; set; }
 
         [DataMember]
-        [MFPropertyDef(Required = true)]
+        [MFPropertyDef]
         [JsonConfEditor(Label = "Property")]
         public MFIdentifier PropertyName { get; set; }
     }
