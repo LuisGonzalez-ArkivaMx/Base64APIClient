@@ -29,11 +29,15 @@
           "Newtonsoft.Json": "[10.0.3]"
         },
         "compile": {
-          "lib/net45/MFiles.VAF.dll": {},
+          "lib/net45/MFiles.VAF.dll": {
+            "related": ".pdb;.xml"
+          },
           "lib/net45/MFiles.VAF.resources.dll": {}
         },
         "runtime": {
-          "lib/net45/MFiles.VAF.dll": {},
+          "lib/net45/MFiles.VAF.dll": {
+            "related": ".pdb;.xml"
+          },
           "lib/net45/MFiles.VAF.resources.dll": {}
         }
       },
@@ -44,13 +48,21 @@
           "MFiles.Crypto": "21.11.3"
         },
         "compile": {
-          "lib/net45/MFiles.VAF.Configuration.Interfaces.dll": {},
-          "lib/net45/MFiles.VAF.Configuration.dll": {},
+          "lib/net45/MFiles.VAF.Configuration.Interfaces.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/MFiles.VAF.Configuration.dll": {
+            "related": ".Interfaces.xml;.xml"
+          },
           "lib/net45/MFiles.VAF.Configuration.resources.dll": {}
         },
         "runtime": {
-          "lib/net45/MFiles.VAF.Configuration.Interfaces.dll": {},
-          "lib/net45/MFiles.VAF.Configuration.dll": {},
+          "lib/net45/MFiles.VAF.Configuration.Interfaces.dll": {
+            "related": ".xml"
+          },
+          "lib/net45/MFiles.VAF.Configuration.dll": {
+            "related": ".Interfaces.xml;.xml"
+          },
           "lib/net45/MFiles.VAF.Configuration.resources.dll": {}
         }
       },
@@ -115,10 +127,14 @@
       "Newtonsoft.Json/10.0.3": {
         "type": "package",
         "compile": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/Newtonsoft.Json.dll": {}
+          "lib/net45/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "NLog/4.7.13": {
@@ -136,10 +152,14 @@
           "System.Xml"
         ],
         "compile": {
-          "lib/net45/NLog.dll": {}
+          "lib/net45/NLog.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net45/NLog.dll": {}
+          "lib/net45/NLog.dll": {
+            "related": ".xml"
+          }
         }
       }
     }
@@ -317,24 +337,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hzapatam\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Dell\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\hzapatam\\source\\repos\\Base64ApiClient\\Base64ApiClient.csproj",
+      "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\Base64APIClient\\Base64ApiClient.csproj",
       "projectName": "Base64ApiClient",
-      "projectPath": "C:\\Users\\hzapatam\\source\\repos\\Base64ApiClient\\Base64ApiClient.csproj",
-      "packagesPath": "C:\\Users\\hzapatam\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\hzapatam\\source\\repos\\Base64ApiClient\\obj\\",
+      "projectPath": "C:\\Users\\Dell\\source\\repos\\Base64APIClient\\Base64ApiClient.csproj",
+      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dell\\source\\repos\\Base64APIClient\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\hzapatam\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -373,7 +388,7 @@
             "version": "[10.0.3, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.304\\RuntimeIdentifierGraph.json"
       }
     }
   }

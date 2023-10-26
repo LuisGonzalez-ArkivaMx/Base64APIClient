@@ -1,18 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "LXrIdLKqhbNeuxJJu64cBIQhb5lAbqLcM4foS9Hd8wCOsk03AlMRZG/I2ScevgKcMjlvbVt816i2TrV/wFuhzA==",
+  "dgSpecHash": "3OrD/eD4QrTuakWr75XFg6+XHwH7xmCqqGq7RHO0QQrVfW8FMe8jhnr9WyQ1mnxtwJbwAaKfWYMDDhLOdLhHTg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hzapatam\\source\\repos\\Base64APIClient\\Base64ApiClient.csproj",
+  "projectFilePath": "C:\\Users\\Dell\\source\\repos\\Base64APIClient\\Base64ApiClient.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\hzapatam\\.nuget\\packages\\interop.mfilesapi\\21.11.3\\interop.mfilesapi.21.11.3.nupkg.sha512",
-    "C:\\Users\\hzapatam\\.nuget\\packages\\mfiles.crypto\\21.11.3\\mfiles.crypto.21.11.3.nupkg.sha512",
-    "C:\\Users\\hzapatam\\.nuget\\packages\\mfiles.vaf\\2.3.623.9\\mfiles.vaf.2.3.623.9.nupkg.sha512",
-    "C:\\Users\\hzapatam\\.nuget\\packages\\mfiles.vaf.configuration\\21.11.3\\mfiles.vaf.configuration.21.11.3.nupkg.sha512",
-    "C:\\Users\\hzapatam\\.nuget\\packages\\mfiles.vaf.extensions\\22.9.41\\mfiles.vaf.extensions.22.9.41.nupkg.sha512",
-    "C:\\Users\\hzapatam\\.nuget\\packages\\mfiles.vaultapplications.logging\\22.5.136\\mfiles.vaultapplications.logging.22.5.136.nupkg.sha512",
-    "C:\\Users\\hzapatam\\.nuget\\packages\\mfilesapi.extensions\\1.0.6\\mfilesapi.extensions.1.0.6.nupkg.sha512",
-    "C:\\Users\\hzapatam\\.nuget\\packages\\newtonsoft.json\\10.0.3\\newtonsoft.json.10.0.3.nupkg.sha512",
-    "C:\\Users\\hzapatam\\.nuget\\packages\\nlog\\4.7.13\\nlog.4.7.13.nupkg.sha512"
+    "C:\\Users\\Dell\\.nuget\\packages\\interop.mfilesapi\\21.11.3\\interop.mfilesapi.21.11.3.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\mfiles.crypto\\21.11.3\\mfiles.crypto.21.11.3.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\mfiles.vaf\\2.3.623.9\\mfiles.vaf.2.3.623.9.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\mfiles.vaf.configuration\\21.11.3\\mfiles.vaf.configuration.21.11.3.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\mfiles.vaf.extensions\\22.9.41\\mfiles.vaf.extensions.22.9.41.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\mfiles.vaultapplications.logging\\22.5.136\\mfiles.vaultapplications.logging.22.5.136.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\mfilesapi.extensions\\1.0.6\\mfilesapi.extensions.1.0.6.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\newtonsoft.json\\10.0.3\\newtonsoft.json.10.0.3.nupkg.sha512",
+    "C:\\Users\\Dell\\.nuget\\packages\\nlog\\4.7.13\\nlog.4.7.13.nupkg.sha512"
   ],
   "logs": []
 }
