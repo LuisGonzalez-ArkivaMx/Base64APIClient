@@ -9,7 +9,7 @@ param(
 $null = [System.Reflection.Assembly]::LoadWithPartialName("Interop.MFilesAPI")
 
 # Target vault
-$vaultName = "M-Files for HR 2.1 - Local"
+$vaultName = "M-Files for HR 2.1 - Dev"
 
 # If we did not get a file path then work it out.
 if([String]::IsNullOrWhiteSpace($appFilePath))
@@ -28,9 +28,9 @@ if([String]::IsNullOrWhiteSpace($appFilePath))
 #$appGuid = "d4cddaa7-ae99-42fb-9848-9fed7290ff52"
 
 # Connection details 
-$authType = [MFilesAPI.MFAuthType]::MFAuthTypeSpecificMFilesUser
-$userName = "luis.gonzalez@arkiva.mx"
-$password = "luis1234"
+$authType = [MFilesAPI.MFAuthType]::MFAuthTypeLoggedOnWindowsUser
+$userName = ""
+$password = ""
 $domain = ""
 $spn = ""
 $protocolSequence = "ncacn_ip_tcp"
