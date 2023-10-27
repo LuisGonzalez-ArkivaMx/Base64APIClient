@@ -36,7 +36,7 @@ namespace Base64ApiClient
         [JsonConfEditor(Label = "Condiciones de busqueda")]
         public SearchConditionsJA SearchConditionsDocuments;
         [DataMember(Order = 5)]
-        [JsonConfEditor(Label = "Documento sin Clasificar")]
+        [JsonConfEditor(Label = "Documento No Identificado")]
         public UnclassifiedModel UnclassifiedModel { get; set; }
         [DataMember(Order = 5)]
         [JsonConfEditor(Label = "Modelos", ChildName ="Modelo")]

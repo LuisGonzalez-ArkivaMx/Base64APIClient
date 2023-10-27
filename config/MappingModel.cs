@@ -10,6 +10,7 @@ namespace Base64ApiClient.config
 {
     [DataContract]
     [JsonConfEditor(NameMember = "ModelName")]
+    [MFWorkflow(RefMember = "Workflow")]
     public class MappingModel
     {
         [DataMember]
@@ -31,6 +32,14 @@ namespace Base64ApiClient.config
         [MFPropertyDef]
         [JsonConfEditor(Label = "Property Document Type")]
         public MFIdentifier PropertyDocumentType { get; set; }
+        [DataMember]
+        [MFWorkflow(AllowEmpty = true, Required = false)]
+        [JsonConfEditor(HelpText = "Opcional. Flujo de trabajo al que el documento se enviara despues de ser reclasificado", Label = "Workflow", DefaultValue = null)]
+        public MFIdentifier Workflow { get; set; }
+        [DataMember]
+        [MFState(AllowEmpty = true, Required = false)]
+        [JsonConfEditor(HelpText = "Opcional. Estado inicial del flujo de trabajo seleccionado", Label = "State", DefaultValue = null)]
+        public MFIdentifier State { get; set; }
         [DataMember]
         [JsonConfEditor(Label = "Mapeos", ChildName ="Mapeo")]
         public List<MappingProperty> Mappings { get; set; } = new List<MappingProperty>();

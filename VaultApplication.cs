@@ -71,6 +71,7 @@ namespace Base64ApiClient
 
                 foreach(DownloadFile document in downloadFiles)
                 {
+                    // LFGH: Adding document id to log info
                     Logger.Info("ID documento: " + objVerEx.ID);
                     Logger.Info("Archivo: " + document.Name + "." + document.Extension);
                     Logger.Info("Archivo descargado: " + document.DownloadFilePath);
@@ -79,7 +80,7 @@ namespace Base64ApiClient
                     document.calculateBase64();
 
                     DocumentToScanRequest documentToScan = new DocumentToScanRequest();
-                    documentToScan.originalFileName = "(" + objVerEx.ID + "): " + document.Name + document.Extension;
+                    documentToScan.originalFileName = "(" + objVerEx.ID + "): " + document.Name + document.Extension; // LFGH: Adding the ObjID of document to concatenate
                     documentToScan.document = document.Base64Content;
 
                     var client = new Base64Client(Configuration);
@@ -113,6 +114,20 @@ namespace Base64ApiClient
                         propertyValue.PropertyDef = propertyDef.ID;
                         propertyValue.Value.SetValue(propertyDef.DataType, mapping.DocumentTypeValue.ID);
                         propertyValues.Add(-1, propertyValue);
+
+                        // LFGH: Adding workflow and initial state in a classified document, only if set in the model.
+                        if (mapping.Workflow != null && mapping.State != null)
+                        {
+                            propertyDef = this.PermanentVault.PropertyDefOperations.GetBuiltInPropertyDef(MFBuiltInPropertyDef.MFBuiltInPropertyDefWorkflow);
+                            propertyValue.PropertyDef = propertyDef.ID;
+                            propertyValue.Value.SetValue(propertyDef.DataType, mapping.Workflow.ID);
+                            propertyValues.Add(-1, propertyValue);
+
+                            propertyDef = this.PermanentVault.PropertyDefOperations.GetBuiltInPropertyDef(MFBuiltInPropertyDef.MFBuiltInPropertyDefState);
+                            propertyValue.PropertyDef = propertyDef.ID;
+                            propertyValue.Value.SetValue(propertyDef.DataType, mapping.State.ID);
+                            propertyValues.Add(-1, propertyValue);
+                        }
 
                         objectVersion = this.PermanentVault.ObjectOperations.CheckOut(objVerEx.ObjVer.ObjID);
                         this.PermanentVault.ObjectPropertyOperations.SetProperties(objectVersion.ObjVer, propertyValues);

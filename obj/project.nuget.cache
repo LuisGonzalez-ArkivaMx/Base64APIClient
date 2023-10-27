@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3OrD/eD4QrTuakWr75XFg6+XHwH7xmCqqGq7RHO0QQrVfW8FMe8jhnr9WyQ1mnxtwJbwAaKfWYMDDhLOdLhHTg==",
+  "dgSpecHash": "EeShiQWZqFJdTG/GcbLjm4d9mHYaI8Za7dKdCqxBoYRHAw+OCcI8bKwBL6IObHsuh83xjh6cir3Gd1cX9ONiMw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dell\\source\\repos\\Base64APIClient\\Base64ApiClient.csproj",
+  "projectFilePath": "C:\\Users\\Dell\\Source\\Repos\\Base64APIClient\\Base64ApiClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\interop.mfilesapi\\21.11.3\\interop.mfilesapi.21.11.3.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\mfiles.crypto\\21.11.3\\mfiles.crypto.21.11.3.nupkg.sha512",
