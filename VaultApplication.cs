@@ -151,6 +151,13 @@ namespace Base64ApiClient
                         propertyValue.Value.SetValue(propertyDef.DataType, Configuration.UnclassifiedModel.State.ID);
                         propertyValues.Add(-1, propertyValue);
 
+                        // LFGH: Adding processing status property value in unclassified document
+                        propertyDef = this.PermanentVault.PropertyDefOperations.GetPropertyDef(Configuration.UnclassifiedModel.ProcessingStatusProperty.ID);
+                        propertyValue.PropertyDef = propertyDef.ID;
+                        var processingStatusValue = Configuration.UnclassifiedModel.ProcessingStatusValue.TypedValue.ToApiObject(PermanentVault, false).GetLookupID();
+                        propertyValue.Value.SetValue(propertyDef.DataType, processingStatusValue);
+                        propertyValues.Add(-1, propertyValue);
+
                         objectVersion = this.PermanentVault.ObjectOperations.CheckOut(objVerEx.ObjVer.ObjID);
                         this.PermanentVault.ObjectPropertyOperations.SetProperties(objectVersion.ObjVer, propertyValues);
                         this.PermanentVault.ObjectOperations.CheckIn(objectVersion.ObjVer);

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell\\Source\\Repos\\Base64APIClient\\Base64ApiClient.csproj": {}
+    "C:\\Users\\Dell\\source\\repos\\Base64APIClient\\Base64ApiClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell\\Source\\Repos\\Base64APIClient\\Base64ApiClient.csproj": {
+    "C:\\Users\\Dell\\source\\repos\\Base64APIClient\\Base64ApiClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\Source\\Repos\\Base64APIClient\\Base64ApiClient.csproj",
+        "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\Base64APIClient\\Base64ApiClient.csproj",
         "projectName": "Base64ApiClient",
-        "projectPath": "C:\\Users\\Dell\\Source\\Repos\\Base64APIClient\\Base64ApiClient.csproj",
+        "projectPath": "C:\\Users\\Dell\\source\\repos\\Base64APIClient\\Base64ApiClient.csproj",
         "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\Source\\Repos\\Base64APIClient\\obj\\",
+        "outputPath": "C:\\Users\\Dell\\source\\repos\\Base64APIClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
