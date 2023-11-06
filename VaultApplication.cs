@@ -115,6 +115,13 @@ namespace Base64ApiClient
                         propertyValue.Value.SetValue(propertyDef.DataType, mapping.DocumentTypeValue.ID);
                         propertyValues.Add(-1, propertyValue);
 
+                        // LFGH: Adding processing status property value in classified document 
+                        propertyDef = this.PermanentVault.PropertyDefOperations.GetPropertyDef(mapping.ProcessingStatusProperty.ID);
+                        propertyValue.PropertyDef = propertyDef.ID;
+                        var processingStatusValue = mapping.ProcessingStatusValue.TypedValue.ToApiObject(PermanentVault, false).GetLookupID();
+                        propertyValue.Value.SetValue(propertyDef.DataType, processingStatusValue);
+                        propertyValues.Add(-1, propertyValue);
+
                         // LFGH: Adding workflow and initial state in a classified document, only if set in the model.
                         if (mapping.Workflow != null && mapping.State != null)
                         {

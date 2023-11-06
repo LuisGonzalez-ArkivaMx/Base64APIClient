@@ -33,6 +33,16 @@ namespace Base64ApiClient.config
         [JsonConfEditor(Label = "Property Document Type")]
         public MFIdentifier PropertyDocumentType { get; set; }
         [DataMember]
+        [MFPropertyDef]
+        [JsonConfEditor(Label = "Estado de procesamiento")]
+        public MFIdentifier ProcessingStatusProperty { get; set; }
+        [DataMember]
+        [ValueSetter(
+            Label = "Valor de estado de procesamiento",
+            AllowedModes = new[] { TypedValueSettingMode.Dynamic, TypedValueSettingMode.Static, TypedValueSettingMode.SetToNULL },
+            PropertyDefReferencePath = ".parent._children{.key == 'ProcessingStatusProperty' }")]
+        public TypedValueSetter ProcessingStatusValue { get; set; }
+        [DataMember]
         [MFWorkflow(AllowEmpty = true, Required = false)]
         [JsonConfEditor(HelpText = "Opcional. Flujo de trabajo al que el documento se enviara despues de ser reclasificado", Label = "Workflow", DefaultValue = null)]
         public MFIdentifier Workflow { get; set; }
